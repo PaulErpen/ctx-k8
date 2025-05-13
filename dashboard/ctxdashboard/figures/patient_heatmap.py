@@ -21,7 +21,7 @@ class PreparedHeatmap:
         for i in range(0, array_shape[0]):
             for j in range(0, array_shape[1]):
                 hover_matrix[i,
-                             j] = f"Day {j+1}: {CTxPatient.ZERO_TIME_STRING}"
+                             j] = f"Day {j+1}: {CTxPatientDay.ZERO_TIME_STRING}"
         return hover_matrix
 
     @classmethod

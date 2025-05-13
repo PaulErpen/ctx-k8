@@ -11,9 +11,9 @@ class FilterPatientsTest(unittest.TestCase):
             pmc.TRACKER_ID: [1, 2, 3, 4, 5],
             pmc.AGE: [80.1, 91.1, 45.2, 83.01, 12.23],
             pmc.GENDER: ["F", "M", "F", "F", "M"],
-            pmc.ECOG: [1.0, 0.0, 2.0, 1.0, np.NaN],
+            pmc.ECOG: [1.0, 0.0, 2.0, 1.0, np.nan],
             pmc.THERAPY: [
-                np.NaN,
+                np.nan,
                 "FOLFOX 6x nach RAPIDO-Like Schema",
                 "Epirubicin, Ifosfamid",
                 "FOLFOX + Nivo",
@@ -50,12 +50,12 @@ class FilterPatientsTest(unittest.TestCase):
             pmc.TUG: [
                 14.0,
                 7.0,
-                np.NaN,
-                np.NaN,
+                np.nan,
+                np.nan,
                 8.0,
             ],
             pmc.HGS: [
-                np.NaN,
+                np.nan,
                 39.0,
                 35.0,
                 32.0,

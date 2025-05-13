@@ -11,8 +11,8 @@ SECOND_PAT_ID = "SECOND_PAT_ID"
 
 first_date = dt.date(2020, 12, 12)
 second_date = dt.date(2020, 12, 13)
-def true_criterion(x, y): return True
-def false_criterion(x, y): return False
+def true_criterion(x, y) -> bool: return True
+def false_criterion(x, y) -> bool: return False
 
 
 full_day_s = 60 * 60 * 24
@@ -47,13 +47,13 @@ dailies_handlers = [
 
 
 class PatientHeatmapTest(unittest.TestCase):
-    def test_prepare_heatmap_durations(self):
+    def test_prepare_heatmap_durations(self) -> None:
         prepared_heatmap: PreparedHeatmap = PreparedHeatmap.prepare_heatmap(
             dailies_handlers, 8)
         self.assertTrue(np.array_equal(
             prepared_heatmap.durations_matrix, np.array([[1, 1], [0, 0]])))
 
-    def test_prepare_heatmap_hover(self):
+    def test_prepare_heatmap_hover(self) -> None:
         prepared_heatmap: PreparedHeatmap = PreparedHeatmap.prepare_heatmap(
             dailies_handlers, 8)
         self.assertTrue(np.array_equal(
@@ -61,7 +61,7 @@ class PatientHeatmapTest(unittest.TestCase):
                 ["Day 1: 24:00:00", "Day 2: 24:00:00"],
                 ["Day 1: 00:00:00", "Day 2: 00:00:00"]])))
 
-    def test_prepare_heatmap_y_ticks(self):
+    def test_prepare_heatmap_y_ticks(self) -> None:
         prepared_heatmap: PreparedHeatmap = PreparedHeatmap.prepare_heatmap(
             dailies_handlers, 8)
         self.assertCountEqual(
@@ -70,7 +70,7 @@ class PatientHeatmapTest(unittest.TestCase):
              f" {SECOND_PAT_ID} -"]
         )
 
-    def test_prepare_heatmap_x_ticks(self):
+    def test_prepare_heatmap_x_ticks(self) -> None:
         prepared_heatmap: PreparedHeatmap = PreparedHeatmap.prepare_heatmap(
             dailies_handlers, 8)
         self.assertCountEqual(
@@ -81,7 +81,7 @@ class PatientHeatmapTest(unittest.TestCase):
 
 
 class PreparedAcceptanceHeatMapTest(unittest.TestCase):
-    def test_create_prepared_acceptance_matrix_acceptance_values(self):
+    def test_create_prepared_acceptance_matrix_acceptance_values(self) -> None:
         prepared_acceptance_heatmap: PreparedAcceptanceHeatMap = PreparedAcceptanceHeatMap.create_prepared_acceptance_matrix(
             dailies_handlers)
         self.assertTrue(
@@ -91,7 +91,7 @@ class PreparedAcceptanceHeatMapTest(unittest.TestCase):
             )
         )
 
-    def test_create_prepared_acceptance_matrix_hover_labels(self):
+    def test_create_prepared_acceptance_matrix_hover_labels(self) -> None:
         prepared_acceptance_heatmap: PreparedAcceptanceHeatMap = PreparedAcceptanceHeatMap.create_prepared_acceptance_matrix(
             dailies_handlers)
         self.assertTrue(
