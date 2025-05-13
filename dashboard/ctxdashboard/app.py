@@ -9,7 +9,7 @@ from ctxdashboard.figures.patient_heatmap import (
     render_times_heatmap,
 )
 from ctxdashboard.figures.pie_chart import create_acceptance_pie_chart
-from ctxdashboard.filter_patients.filter_patients import filter_patients
+from ctxdashboard.filter.filter_patients import filter_patients
 from ctxdashboard.acceptance.min_daily_hours import (
     simple_min_hours_daily_acceptance_criterion,
 )

@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 from ctxdashboard.model.patient_meta_column import PatientMetaColumn as pmc
-from ctxdashboard.filter_patients.filter_patients import filter_patients
+from ctxdashboard.filter.filter_patients import filter_patients
 import numpy as np
 
 
