@@ -1,8 +1,8 @@
 import unittest
-from dashboard.ctxdashboard.acceptance.overall_consecutive_days import (
+from ctxdashboard.acceptance.overall_consecutive_days import (
     minimum_overall_and_consecutive_days_patient_acceptance_criterion,
 )
-from dashboard.ctxdashboard.model.patient_day import CTxPatientDay
+from ctxdashboard.model.patient_day import CTxPatientDay
 import datetime as dt
 
 

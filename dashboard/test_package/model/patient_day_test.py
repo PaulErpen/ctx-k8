@@ -1,6 +1,6 @@
 import unittest
 import datetime as dt
-from dashboard.ctxdashboard.model.patient_day import CTxPatientDay
+from ctxdashboard.model.patient_day import CTxPatientDay
 
 
 class PatientDayTest(unittest.TestCase):

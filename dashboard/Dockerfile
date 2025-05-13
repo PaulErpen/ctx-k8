@@ -4,9 +4,9 @@ ENV PYTHONUNBUFFERED True
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
-COPY . ./
+COPY ./ /app
 
-RUN pip install --no-cache-dir -r docker/requirements.txt
-RUN pip install -e .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install .
 
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 ctxdashboard.app:server

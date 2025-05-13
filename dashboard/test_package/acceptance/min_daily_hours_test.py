@@ -1,5 +1,5 @@
 import unittest
-from dashboard.ctxdashboard.acceptance.min_daily_hours import simple_min_hours_daily_acceptance_criterion
+from ctxdashboard.acceptance.min_daily_hours import simple_min_hours_daily_acceptance_criterion
 
 
 class MinDailyHoursTest(unittest.TestCase):

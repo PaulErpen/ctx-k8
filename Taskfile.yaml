@@ -1,0 +1,25 @@
+version: '3'
+
+tasks:
+  create-conda-env:
+    desc: "Create a conda environment for the project"
+    cmds:
+      - conda env create -f environment.yml
+  remove-conda-env:
+    desc: "Remove the conda environment for the project"
+    cmds:
+      - conda env remove -n ctx-k8
+  install-dashboard:
+    desc: "Install the dashboard application"
+    dir: ./dashboard
+    cmds:
+      - python3 -m pip install -e .
+  build-dashboard-docker:
+    desc: "Build the docker image of the dashboard application"
+    dir: ./dashboard
+    cmds:
+      - sudo docker build . -t ctxdashoard:latest
+  run-dashboard-docker:
+    desc: "Run the docker image of the dashboard application"
+    cmds:
+      - sudo docker run -p 5231:5231 -e PORT=5231 ctxdashoard:latest 

@@ -60,8 +60,6 @@ def render_times_heatmap(patient_entries: List[CTxPatient], accept_day_hours: in
                         (1, "#5afc03")]
         )
     )
-    selected_x_ticks = [i for i in range(0, len(
-        prepared_heatmap.x_ticks), 1 + int(log(len(prepared_heatmap.x_ticks), 2)))]
     fig.update_layout(dict(
         xaxis={
             'showgrid': False,

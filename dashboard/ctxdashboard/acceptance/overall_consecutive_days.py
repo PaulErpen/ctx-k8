@@ -1,5 +1,5 @@
 from typing import Callable, List
-from dashboard.ctxdashboard.model.patient_day import CTxPatientDay
+from ctxdashboard.model.patient_day import CTxPatientDay
 
 
 def minimum_overall_and_consecutive_days_patient_acceptance_criterion(

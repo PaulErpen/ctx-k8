@@ -1,6 +1,6 @@
 import unittest
 
-from dashboard.ctxdashboard.model.patient import CTxPatient
+from ctxdashboard.model.patient import CTxPatient
 
 
 class PatientTest(unittest.TestCase):
