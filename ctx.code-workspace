@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "dashboard"
+    },
+  ],
+  "settings": {
+    "python.pythonPath": "/home/paul/.conda/envs/ctx-fitness/bin/python",
+    "python.analysis.typeCheckingMode": "strict"
+  }
+}
